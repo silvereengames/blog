@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+      * {
+        font-family: "Fira Code", monospace;
+        margin: 0;
+        color: white;
+        background-color: #1a1a1a;
+        text-align: center;
+      }
+
+      .title {
+        text-align: center;
+      }
+    </style>
+    <title>Why everything is cool</title>
+  </head>
+  <body>
+    <h1 id="title" class="title">Why everything is cool</h1>
+    <small>Sun Mar 24 2024 19:42:00 GMT-0400 (Eastern Daylight Time)</small>
+    <br />
+    <p>Yes... just a little test</p>
+
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script>
+      const title = document.getElementById('title')
+      const typewriterTitle = new Typewriter(title, {delay: 75});
+
+      typewriterTitle
+        .typeString("Why everything is cool")
+        .start();
+    </script>
+  </body>
+</html>
