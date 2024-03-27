@@ -61,7 +61,7 @@
         <div style="width: 1px; height: 5vh"></div>
         <ul>
             {% for item in collections.all %}
-                    <div class="post" onclick="window.open(`${location.pathname.replace('/index.html','')}{{ item.url }}index.html`, '_parent')">
+                    <div class="post" onclick="window.open(`{{ data.baseUrl }}{{ item.url }}index.html`, '_parent')">
                         <p class="post-title">{{ item.data.title }}</p>
                     </div>
             {% endfor %}
