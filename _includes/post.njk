@@ -35,7 +35,10 @@
       const title = document.getElementById('title')
       const typewriterTitle = new Typewriter(title, {delay: 75});
       const date = document.getElementById('date')
-      const typewriterDate = new Typewriter(date, {delay: 75});
+      const typewriterDate = new Typewriter(date, {
+      delay: 75,
+      cursor: " ",
+      });
 
       printTitle()
 
