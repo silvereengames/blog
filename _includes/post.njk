@@ -26,6 +26,7 @@
   </head>
   <body>
     <h1 id="title" class="title">{{ title }}</h1>
+    <p class="title" id="date"></p>
     <small>{{ date }}</small>
     <br />
     {{ content | safe }}
@@ -33,10 +34,21 @@
     <script>
       const title = document.getElementById('title')
       const typewriterTitle = new Typewriter(title, {delay: 75});
+      const date = document.getElementById('date')
+      const typewriterDate = new Typewriter(date, {delay: 75});
 
+      function printTitle() {
+      setTimeout(printDate, "{{ title }}".length*75+1000);
       typewriterTitle
         .typeString("{{ title }}")
         .start();
+      }
+
+      function printDate() {
+        typewriterDate
+          .typeString("{{ date }}")
+          .start();
+        }
     </script>
   </body>
 </html>
